@@ -28,7 +28,7 @@ def create_kpi_card(title, value, icon, border_color):
 # --- DATA LOADING & PREPROCESSING ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Users\HP\OneDrive\Desktop\covid-19\covid19_cleaned_dataset.csv")
+    df = pd.read_csv("covid19_cleaned_dataset.csv")
     df['date'] = pd.to_datetime(df['date'])
     df = df.fillna(0)
     return df
